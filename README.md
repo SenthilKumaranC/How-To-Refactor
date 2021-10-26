@@ -1,7 +1,7 @@
 # How-To-Refactor
 
 I saw a post to refactor below code in https://dev.to/p42/how-would-you-refactor-this-js-function-4n71
-
+```
 const lineChecker = (line, isFirstLine) => {
   let document = ``;
 
@@ -16,10 +16,11 @@ const lineChecker = (line, isFirstLine) => {
   return document;
 
 };
+```
 
 I have refactored like below by creating Spec Units.
 
-<code>
+```
 const specApis = specificationGroup();
 
 specApis.addSpecObject(headerSpecGroup, headerSpecGroupCallback);
@@ -30,4 +31,4 @@ export const lineChecker = (line, isFirstLine) => {
 let initialDocument = "";
 return specApis.validateSpecs({ initialDocument, line, isFirstLine });
 }
-</code>
+```
